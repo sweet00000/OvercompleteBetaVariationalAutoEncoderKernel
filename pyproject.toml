@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "obvaekernel"
+version = "0.1.0"
+description = "Portable NumPy-first OBVAE kernel features for PCA/kernel workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Sweet" }
+]
+dependencies = [
+  "numpy>=1.23",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+benchmark = [
+  "scikit-learn>=1.2",
+  "scipy>=1.9",
+  "pandas>=1.5",
+  "matplotlib>=3.7",
+  "requests>=2.31",
+]
+dev = [
+  "build>=1.2",
+  "twine>=5",
+  "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://example.com/obvaekernel"
+Repository = "https://example.com/obvaekernel"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/obvaekernel"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/obvaekernel",
+  "tests",
+  "examples",
+  "README.md",
+  "LICENSE",
+  "pyproject.toml",
+]
+
