@@ -40,8 +40,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://example.com/obvaekernel"
-Repository = "https://example.com/obvaekernel"
+Homepage = "https://github.com/sweet00000/OvercompleteBetaVariationalAutoEncoderKernel"
+Repository = "https://github.com/sweet00000/OvercompleteBetaVariationalAutoEncoderKernel"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/obvaekernel"]
